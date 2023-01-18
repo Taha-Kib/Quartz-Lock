@@ -16,6 +16,7 @@ function Nav() {
     <div>
       <header>
       <img src={Logo} className = "chemical-logo" alt="app__logo" />
+      <h3 className="header-quartzlock">QUARTZLOCK</h3>
         <nav ref={navRef}>
           <a href="/#">Home</a>
           <a href="/#">Epoxy Grouts</a>

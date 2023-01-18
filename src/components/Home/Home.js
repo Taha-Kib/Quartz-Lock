@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Logo from '../../Assets/Logo.png';
 import './Home.css';
+import ImageSlider from "./ImageSlider";
 
 function Home() {
   return (
@@ -10,8 +10,10 @@ function Home() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      {/* <img src={Logo} className = "chemical-logo" alt="app__logo" /> */}
       Home
+      <ImageSlider/>
+
+      {/* <iframe width="560" height="500" src="https://www.youtube.com/embed/xNRJwmlRBNU" title="YouTube video player" frameborder="0" allowFullScreen></iframe> */}
     </motion.div>
   );
 }
