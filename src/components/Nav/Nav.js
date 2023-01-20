@@ -23,13 +23,13 @@ function Nav() {
           <div className="dropdown-menu">
             <button className="menu-btn">Products</button>
             <div className="menu-content">
-              <a className="links-hidden" href="#">
+              <a className="links-hidden" href="/EpoxyGrouts">
                 Epoxy Grouts
               </a>
-              <a className="links-hidden" href="#">
+              <a className="links-hidden" href="/Coatings">
                 Coatings
               </a>
-              <a className="links-hidden" href="#">
+              <a className="links-hidden" href="/Potato">
                 Potato
               </a>
             </div>

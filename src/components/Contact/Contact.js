@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./Contact.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleChevronLeft, faCircleChevronRight, faCircleXmark } from "@fortawesome/free-solid-svg-icons";
+
 import images from "../../images";
 function Contact() {
   const [slideNumber, setSlideNumber] = useState(0);
@@ -10,8 +13,6 @@ function Contact() {
     setSlideNumber(index);
     setOpenModal(true);
   }
-
-
   const handleCloseModal = () =>{
     setOpenModal(false);
   }
@@ -34,10 +35,10 @@ function Contact() {
     >
     {openModal && 
       <div className="sliderWrap">
-        <button className="btnClose" onClick={handleCloseModal}>X</button>
-        <button className="btnNext" onClick={nextSlide}>Next</button>
-        <button className="btnPrev" onClick={prevSlide}>Previous</button>
-        <div className="fullScreenImage">
+        <FontAwesomeIcon icon = {faCircleXmark}className="btnClose" onClick={handleCloseModal}></FontAwesomeIcon>
+        <FontAwesomeIcon icon ={faCircleChevronRight} className="btnNext" onClick={nextSlide}></FontAwesomeIcon>
+        <FontAwesomeIcon icon ={faCircleChevronLeft} className="btnPrev" onClick={prevSlide}></FontAwesomeIcon>
+        <div className="fullScreenImage" onClick={handleCloseModal}>
           <img src={images[slideNumber]} alt="" />
         </div>
       </div>
