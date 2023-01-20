@@ -4,6 +4,7 @@ import Home from "../Home/Home";
 import { AnimatePresence } from "framer-motion";
 import Contact from "../Contact/Contact";
 import Products from "../Products/Products";
+import EpoxyGrouts from "../Products/EpoxyGrouts";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -13,6 +14,7 @@ function AnimatedRoutes() {
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/EpoxyGrouts" element={<EpoxyGrouts />} />
       </Routes>
     </AnimatePresence>
   );
