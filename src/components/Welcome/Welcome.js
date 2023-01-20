@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import './Welcome.css';
 
 
 function Welcome() {
+
   return (
     <div className="center">
       <div className="wave"></div>
