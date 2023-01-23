@@ -36,6 +36,7 @@ function Nav() {
           </div>
           <a href="/#">Documentation</a>
           <a href="/contact">Contact</a>
+          <button className="signin-btn">SignIn</button>
           <button className="nav-btn nav-close-btn" onClick={showNavBar}>
             <FaTimes />
           </button>

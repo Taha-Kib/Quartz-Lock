@@ -1,16 +1,18 @@
 .contactus-items {
   display: grid;
   grid-auto-flow: column;
-  grid-column-gap: 50px;
+  grid-column-gap: 150px;
   justify-content: center;
   align-items: center;
-  margin-top: 200px;
-  padding: 2rem;
+  margin-top: 250px;
 }
 
-.facebook-icon, .email-icon, .phone-icon{
-    cursor: pointer;
-    font-size: 50px;
+.facebook-icon,
+.email-icon,
+.phone-icon,
+.youtube-icon {
+  cursor: pointer;
+  font-size: 50px;
 }
 
 .facebook-icon {
@@ -21,8 +23,11 @@
   color: rgb(215, 151, 249);
 }
 
+.phone-icon {
+  font-size: 42px;
+  color: rgb(124, 115, 33);
+}
 
-.phone-icon{
-    font-size: 42px;
-    color: rgb(124, 115, 33);
+.youtube-icon {
+  color: rgb(255, 0, 0);
 }

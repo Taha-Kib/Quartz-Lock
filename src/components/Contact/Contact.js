@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 import "./Contact.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
-import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import ExpandCard from "./ExpandCard";
 
 function Contact() {
   const handleFacebookClick = () => {
@@ -11,12 +12,9 @@ function Contact() {
     console.log("FB BUTTON PRESSED");
   };
 
-  const handleEmailClick = () => {
-    console.log("Email button pressed");
-  };
-
-  const handlePhoneClick = () => {
-    console.log("Phone button pressed");
+  const handleYoutubeClick = () => {
+    window.open("https://www.google.com", "_blank"); 
+    console.log("Youtube button pressed");
   };
 
   return (
@@ -32,15 +30,20 @@ function Contact() {
           icon={faFacebook}
           onClick={handleFacebookClick}
         />
-        <FontAwesomeIcon
-          className="email-icon"
+        <ExpandCard
           icon={faEnvelope}
-          onClick={handleEmailClick}
+          classProp={"email-icon"}
+          text={"heloworld@gmail.com"}
+        />
+        <ExpandCard
+          icon={faPhone}
+          classProp={"phone-icon"}
+          text={"+923244994454"}
         />
         <FontAwesomeIcon
-          className="phone-icon"
-          icon={faPhone}
-          onClick={handlePhoneClick}
+          className="youtube-icon"
+          icon={faYoutube}
+          onClick={handleYoutubeClick}
         />
       </div>
     </motion.div>

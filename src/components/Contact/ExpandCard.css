@@ -1,0 +1,10 @@
+.card p{
+    text-align: center;
+}
+
+.expand{
+    color: rgb(181, 0, 75);
+    width: 5rem;
+    margin-top: 15px;
+    
+}

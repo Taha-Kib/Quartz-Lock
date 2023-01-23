@@ -67,11 +67,24 @@ nav button{
 
 }
 
+nav button:hover{
+    color: var(--secondaryColor);
+}
+
+.signin-btn{
+    font-size: 20px;
+    font-weight: 900;
+    font-family: 'Cormorant Upright', serif;
+    border: none;
+    cursor: pointer;
+    align-items: right;
+}
 
 .menu-btn {
     font-size: 20px;
     font-weight: 900;
     font-family: 'Cormorant Upright', serif;
+    cursor: pointer;
     border: none;
  }
  .dropdown-menu {
