@@ -1,25 +1,24 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useContext } from "react";
 import Footer from "./components/Footer/Footer";
 import Nav from "./components/Nav/Nav";
-import Welcome from "./components/Welcome/Welcome";
 import { AppContext } from "./Context/AppContext";
 import AnimatedRoutes from "./components/AnimatedRoutes/AnimatedRoutes";
+import LoadingScreen from "./components/LoadingScreen/LoadingScreen";
 
 function StartApp() {
-  const { showLoading, setShowLoading } = useContext(AppContext);
-
+  // const loadingRef = useRef(true);
   // useEffect(() => {
   //   setTimeout(() => {
-  //     setShowLoading(false);
-  //     console.log(showLoading);
-  //   }, 1000);
+  //     loadingRef.current = false;
+  //   }, 10000);
   // }, []);
+  const { showLoading } = useContext(AppContext);
 
   return (
     <div>
-      {showLoading === false ? (
-        <Welcome />
+      {showLoading === true ? (
+        <LoadingScreen />
       ) : (
         <div>
           <Nav />

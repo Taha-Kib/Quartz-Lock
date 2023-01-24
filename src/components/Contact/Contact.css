@@ -3,7 +3,7 @@
   grid-auto-flow: column;
   grid-column-gap: 150px;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin-top: 250px;
 }
 

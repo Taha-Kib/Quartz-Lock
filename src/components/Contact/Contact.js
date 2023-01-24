@@ -12,6 +12,8 @@ function Contact() {
     console.log("FB BUTTON PRESSED");
   };
 
+
+
   const handleYoutubeClick = () => {
     window.open("https://www.google.com", "_blank"); 
     console.log("Youtube button pressed");
