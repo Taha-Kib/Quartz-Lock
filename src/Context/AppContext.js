@@ -1,34 +1,26 @@
-import React, { createContext, useState, useRef, useEffect } from "react";
+import React, { createContext, useState, useEffect } from "react";
 
 const AppContext = createContext();
 
 const AppContextProvider = ({ children }) => {
-  const [showLoading, setShowLoading] = useState(false);
-  const loadingRef = useRef(true);
-  useEffect(() => {
-    setTimeout(() => {
-      loadingRef.current = false;
-    }, 10000);
-  }, []);
+  const [showLoading, setShowLoading] = useState(true);
 
 
   useEffect(() => {
     setTimeout(() => {
       setShowLoading(false);
-      // console.log(showLoading);
-    }, 1500);
+    }, 2000);
   }, [showLoading]);
 
   return (
     <AppContext.Provider
       value={{
         showLoading,
-        setShowLoading,
-        loadingRef
+        setShowLoading
       }}
     >
       {children}
     </AppContext.Provider>
   );
 };
-export {AppContext, AppContextProvider}
+export { AppContext, AppContextProvider }

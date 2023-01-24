@@ -29,12 +29,14 @@ header {
 .chemical-logo{
     width: 5%;
     padding: 10px;
+    cursor: pointer;
     background: transparent;
 }
 
 .header-quartzlock{
     position: absolute;
     left: 130px;
+    cursor: pointer;
 }
 
 nav a{

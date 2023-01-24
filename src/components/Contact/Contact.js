@@ -25,7 +25,7 @@ function Contact() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <h3>To Contact us, you can use any of the following links :o</h3>
+      <h3 className="contactus-text">To Contact us, you can use any of the following links :o</h3>
       <div className="contactus-items">
         <FontAwesomeIcon
           className="facebook-icon"

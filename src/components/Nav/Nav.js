@@ -2,8 +2,13 @@ import React, { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./Nav.css";
 import Logo from "../../Assets/Logo.png";
+import { Link, useNavigate } from "react-router-dom";
+
 
 function Nav() {
+
+  let navigate = useNavigate()
+
   const navRef = useRef();
 
   const showNavBar = () => {
@@ -14,29 +19,20 @@ function Nav() {
   return (
     <div>
       <header>
-        <img src={Logo} className="chemical-logo" alt="app__logo" />
-        <h3 className="header-quartzlock">QUARTZLOCK</h3>
+        <img src={Logo} onClick={() => navigate('/')} className="chemical-logo" alt="app__logo" />
+        <h3 onClick={() => navigate('/')} className="header-quartzlock">QUARTZLOCK</h3>
         <nav ref={navRef}>
-          <a href="/#">Home</a>
-          {/* <a href="/#">Epoxy Grouts</a>
-          <a href="/products">Products</a> */}
+          <Link to="/">Home</Link>
           <div className="dropdown-menu">
             <button className="menu-btn">Products</button>
             <div className="menu-content">
-              <a className="links-hidden" href="/EpoxyGrouts">
-                Epoxy Grouts
-              </a>
-              <a className="links-hidden" href="/Coatings">
-                Coatings
-              </a>
-              <a className="links-hidden" href="/Potato">
-                Potato
-              </a>
+              <Link to="/EpoxyGrouts" className="links-hidden" >Epoxy Grouts</Link>
+              <Link to="/Coatings" className="links-hidden" >Coatings</Link>
+              <Link to="/Potato" className="links-hidden" >Potato</Link>
             </div>
           </div>
-          <a href="/#">Documentation</a>
-          <a href="/contact">Contact</a>
-          {/* <button className="signin-btn">SignIn</button> */}
+          <Link to="/contact">Contact</Link>
+          <Link to="/documentation">Documentation</Link>
           <button className="nav-btn nav-close-btn" onClick={showNavBar}>
             <FaTimes />
           </button>

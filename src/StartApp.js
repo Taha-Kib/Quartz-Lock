@@ -7,12 +7,7 @@ import AnimatedRoutes from "./components/AnimatedRoutes/AnimatedRoutes";
 import LoadingScreen from "./components/LoadingScreen/LoadingScreen";
 
 function StartApp() {
-  // const loadingRef = useRef(true);
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     loadingRef.current = false;
-  //   }, 10000);
-  // }, []);
+
   const { showLoading } = useContext(AppContext);
 
   return (
