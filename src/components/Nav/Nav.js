@@ -1,13 +1,11 @@
 import React, { useRef } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaLock } from "react-icons/fa";
 import "./Nav.css";
 import Logo from "../../Assets/Logo.png";
 import { Link, useNavigate } from "react-router-dom";
 
-
 function Nav() {
-
-  let navigate = useNavigate()
+  let navigate = useNavigate();
 
   const navRef = useRef();
 
@@ -19,20 +17,36 @@ function Nav() {
   return (
     <div>
       <header>
-        <img src={Logo} onClick={() => navigate('/')} className="chemical-logo" alt="app__logo" />
-        <h3 onClick={() => navigate('/')} className="header-quartzlock">QUARTZLOCK</h3>
+        <img
+          src={Logo}
+          onClick={() => navigate("/")}
+          className="chemical-logo"
+          alt="app__logo"
+        />
+        <h3 onClick={() => navigate("/")} className="header-quartzlock">
+          QUARTZL
+          <FaLock />
+          CK
+        </h3>
         <nav ref={navRef}>
           <Link to="/">Home</Link>
           <div className="dropdown-menu">
             <button className="menu-btn">Products</button>
             <div className="menu-content">
-              <Link to="/EpoxyGrouts" className="links-hidden" >Epoxy Grouts</Link>
-              <Link to="/Coatings" className="links-hidden" >Coatings</Link>
-              <Link to="/Potato" className="links-hidden" >Potato</Link>
+              <Link to="/EpoxyGrouts" className="links-hidden">
+                Epoxy Grouts
+              </Link>
+              <Link to="/Coatings" className="links-hidden">
+                Coatings
+              </Link>
+              <Link to="/Potato" className="links-hidden">
+                Potato
+              </Link>
             </div>
           </div>
           <Link to="/contact">Contact</Link>
           <Link to="/documentation">Documentation</Link>
+          <Link to="/Signin">Signin</Link>
           <button className="nav-btn nav-close-btn" onClick={showNavBar}>
             <FaTimes />
           </button>
